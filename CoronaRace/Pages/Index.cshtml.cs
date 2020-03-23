@@ -25,6 +25,7 @@ namespace CoronaRace.Pages
 
         public void OnGet()
         {
+          
             countries = getCountries();
 
         }
@@ -46,10 +47,12 @@ namespace CoronaRace.Pages
             {
                 var cols = Regex.Matches(row.ToString(), "<td .*?>[\\s\\S]*?</td>");
                 var name = Regex.Match(cols[0].Value, ">[A-Z].*?<");
-                var activecases = Regex.Match(cols[1].Value, "[\\d,]+");
+                var totalcases = Regex.Match(cols[1].Value, "[\\d,]+");
+                var active_cases = Regex.Match(cols[6].Value, "[\\d,]+");
                 var cases = new Cases()
                 {
-                    ActiveCases = int.Parse(activecases.Value.Replace(",", ""))
+                    ActiveCases = int.Parse(active_cases.Value.Replace(",", "")),
+                    TotalCases = int.Parse(totalcases.Value.Replace(",",""))
                 };
                 var country = new Country()
                 {
@@ -60,17 +63,21 @@ namespace CoronaRace.Pages
                 countries.Add(country);
          
             }
-            
-            var active_cases = countries.Select(i => i.Cases.ActiveCases);
+             
+           
+            var total_cases = countries.Select(i => i.Cases.ActiveCases);
+            var max = total_cases.Max();
+            total_cases = total_cases.Concat(new[] { (int)(max * 1.1) });
 
-            var sum = active_cases.Sum() + 5;
-            var avg = active_cases.Average() + 5;
-            var standardDeviation = Math.Sqrt((sum) / (active_cases.Count() - 1));
+            var sum = total_cases.Sum();
+            var avg = total_cases.Average();
+            var standardDeviation = Math.Sqrt((sum) / (total_cases.Count() - 1));
             foreach(var country in countries)
             {
                 country.Distance = (int)((country.Cases.ActiveCases - avg) / standardDeviation);
             }
-            return countries;
+
+            return countries.OrderByDescending(i => i.Cases.ActiveCases).ToList();
         }
 
         private string  GetData()

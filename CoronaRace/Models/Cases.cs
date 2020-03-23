@@ -4,7 +4,10 @@
     {
         public int ActiveCases { get; set; }
         public int RecoveredCases { get; set; }
-        public int Deaths { get; set;
-        }
+        public int Deaths { get; set; }
+        public int TotalCases { get; set; }
+
+            
+        
     }
 }

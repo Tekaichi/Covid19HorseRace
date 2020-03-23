@@ -72,13 +72,37 @@ body {
 .horse {
     width: 2em;
     height: 2em;
-    animation: shake 1.5s infinite;
+    position:relative;
+    top:0.25em;
     transform:rotateY(180deg);
 }
 
+.horse-movement-0 {
+    animation: shake  1.5s infinite;
+}
+
+.horse-movement-1 {
+    animation: shake 1s 1.5s infinite;
+}
+
+.horse-movement-2 {
+    animation: shake 2s 1.5s infinite;
+}
+.horse-movement-3 {
+    animation: shake 3s 1.5s infinite;
+}
+
+.horse-movement-4 {
+    animation: shake 1s 1.4s infinite;
+}
+
+.horse-movement-5 {
+    animation: shake 2s 2s infinite;
+}
 .line {
     position: relative;
-    top: -0.2em;
+    top: 0.1em;
+    right:-0.1em;
 }
 
 body {
@@ -87,17 +111,68 @@ body {
 }
 
 .board {
-    margin: 2em;
-    background-color: linen;
+    margin: 0.4em 1em 2em 0.5em;
+  
 }
 
 .player {
     border: 0.07em solid gray;
     background-color: lemonchiffon;
+    height:2.85em;
     
 }/**/
 
+ .col-name{
+    
+ }
+ 
+ .name{
+  
+     position:relative;
+     top:0.45em;
+     right:-0.8em;
 
+ }
+
+.number {
+    background-color: lightblue;
+    padding: 0.3em;
+    top: 0.5em;
+    bottom: 0.4em;
+}
+
+.dash_0 {
+    animation: opace 5s infinite;
+}
+.dash_1 {
+    animation: opace 1s 5s infinite;
+}
+.dash_2 {
+    animation: opace 2s 5s infinite;
+}
+.dash_3 {
+    animation: opace 3s 5s infinite;
+}
+.dash_4 {
+    animation: opace 4s 5s infinite;
+}
+
+@keyframes opace{
+    10%,90%{
+        opacity:1.0;
+    }
+    0%, 80% {
+        opacity: 0.5;
+    }
+
+    30%, 50%, 70% {
+        opacity: 0.2;
+    }
+
+    40%, 60% {
+        opacity: 0.8;
+    }
+}
 @keyframes shake {
 
     10%, 90% {
@@ -115,3 +190,5 @@ body {
     40%, 60% {
         transform: rotateY(160deg);
     }
+}
+

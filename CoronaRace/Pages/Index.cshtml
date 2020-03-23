@@ -1,33 +1,69 @@
 ﻿@page
 @model IndexModel
 @{
-    ViewData["Title"] = "Covid-19 Race";
+    ViewData["Title"] = "Scores";
 }
 
 
 
-    <div style="text-align: center;">
-        <h1>Stay home or win the race</h1>
-        <a href="https://github.com/Tekaichi/Covid19HorseRace" target="_blank">
-            <img alt="github "src="https://cdn.icon-icons.com/icons2/1488/PNG/512/5347-github_102542.png" style="width:2em;height:2em" /> 
-        </a>
-        <br />
+<div style="text-align: center;">
+    <h1><i style="color:green">Stay home</i> or <b style="color:red">win the race</b></h1>
+
+    Contribute
+
+
+    <a href="https://github.com/Tekaichi/Covid19HorseRace" target="_blank">
+        <img alt="github " src="https://cdn.icon-icons.com/icons2/1488/PNG/512/5347-github_102542.png" style="width:2em;height:2em" />
+    </a>
+
+
+
+
+
+    <br />
     [<a href="https://www.worldometers.info/coronavirus/" style="text-decoration:none" target="_blank">source</a>]
-    </div>
+
+    <br />
+    <br />
+
+</div>
+<div class="text-center">
+    <span class="alert-info p-1" style="margin-top:0.5em">
+        <i>Active Cases </i>/ <b>Total Cases</b>
+    </span>
+</div>
 <div class="board">
 
+    @{
+        int dash_ = 0;
+        int horse_mov = 0;
+    }
     @foreach(var country in Model.countries) {
-    <div class="player" style="height:2.5em;">
-        <div class="movable">
-            <i class="line">_</i>
-            @for (var i = 0; i < country.Distance; i+=40)
-            {
-            <i class="line">_</i>
-            }
 
-            <img class="horse" src=@country.Horse alt="race">
+       horse_mov = (horse_mov + 1) % 6;
 
-            <i class="line" style="background-color:lightslategray;border-radius: 1em;padding:0.3em;top:0.3em;bottom:0.3em;">@country.Cases.ActiveCases <b>@country.Name</b></i>
+    <div class="row">
+        <div class="col-sm-2 col-name text-right">
+            <b class="name">@country.Name</b>
+        </div>
+        <div class="col">
+            <div class="player">
+
+                <div class="movable">
+                
+                    @for (var i = 0; i < country.Distance; i += 20)
+                    {
+                        dash_ = (dash_ + 1) % 5;
+                    <i class="line dash_@dash_" style="opacity:0.5;">_</i>
+                    }
+
+                    <img class="horse horse-movement-@horse_mov" src=@country.Horse alt="race">
+
+                    <i class="line number">@country.Cases.ActiveCases/@country.Cases.TotalCases</i>
+
+
+                </div>
+            </div>
         </div>
     </div>
     }
