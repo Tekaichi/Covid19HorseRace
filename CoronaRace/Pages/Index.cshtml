@@ -51,7 +51,7 @@
 
                 <div class="movable">
                 
-                    @for (var i = 0; i < country.Distance; i += 20)
+                    @for (var i = 0; i < country.Distance; i += 25)
                     {
                         dash_ = (dash_ + 1) % 5;
                     <i class="line dash_@dash_" style="opacity:0.5;">_</i>
@@ -63,6 +63,11 @@
 
 
                 </div>
+            </div>
+        </div>
+        <div class="col-sm-1" style="position:relative;left:-0.1em;">
+            <div class="newcases" style="background-color:yellow;position:relative;top:0.1em;left:-2em;width:80%; height:90%;border:0.1em solid black;">
+                +@country.Cases.NewCases
             </div>
         </div>
     </div>

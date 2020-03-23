@@ -49,10 +49,21 @@ namespace CoronaRace.Pages
                 var name = Regex.Match(cols[0].Value, ">[A-Z].*?<");
                 var totalcases = Regex.Match(cols[1].Value, "[\\d,]+");
                 var active_cases = Regex.Match(cols[6].Value, "[\\d,]+");
+                int new_cases;
+                try
+                {
+                    new_cases = int.Parse(Regex.Match(cols[2].Value, "[\\d,]+").Value.Replace(",", ""));
+                }catch(Exception e)
+                {
+                    new_cases = 0;
+                }
+
                 var cases = new Cases()
                 {
                     ActiveCases = int.Parse(active_cases.Value.Replace(",", "")),
-                    TotalCases = int.Parse(totalcases.Value.Replace(",",""))
+                    TotalCases = int.Parse(totalcases.Value.Replace(",", "")),
+                    NewCases = new_cases
+                   
                 };
                 var country = new Country()
                 {

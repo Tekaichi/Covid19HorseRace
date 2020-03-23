@@ -6,6 +6,7 @@
         public int RecoveredCases { get; set; }
         public int Deaths { get; set; }
         public int TotalCases { get; set; }
+        public int NewCases { get; set; }
 
             
         
