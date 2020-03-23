@@ -11,5 +11,6 @@ namespace CoronaRace.Models
         public string Name { get; set; }
         public Cases Cases { get; set; }
         public int Distance { get; set; }
+        public string Horse { get; set; }
     }
 }

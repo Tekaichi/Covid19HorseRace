@@ -109,7 +109,7 @@ body {
     }
 
     30%, 50%, 70% {
-        transform: rotateY(180deg);
+        transform: rotateY(150deg);
     }
 
     40%, 60% {

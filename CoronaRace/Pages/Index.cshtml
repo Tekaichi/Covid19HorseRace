@@ -6,9 +6,14 @@
 
 
 
-<div style="text-align: center;">
-    <h1>Stay home or win the race</h1>
-</div>
+    <div style="text-align: center;">
+        <h1>Stay home or win the race</h1>
+        <a href="https://github.com/Tekaichi/Covid19HorseRace" target="_blank">
+            <img alt="github "src="https://cdn.icon-icons.com/icons2/1488/PNG/512/5347-github_102542.png" style="width:2em;height:2em" /> 
+        </a>
+        <br />
+    [<a href="https://www.worldometers.info/coronavirus/" style="text-decoration:none" target="_blank">source</a>]
+    </div>
 <div class="board">
 
     @foreach(var country in Model.countries) {
@@ -20,7 +25,7 @@
             <i class="line">_</i>
             }
 
-            <img class="horse" src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/samsung/220/horse-racing_1f3c7.png " alt="race">
+            <img class="horse" src=@country.Horse alt="race">
 
             <i class="line" style="background-color:lightslategray;border-radius: 1em;padding:0.3em;top:0.3em;bottom:0.3em;">@country.Cases.ActiveCases <b>@country.Name</b></i>
         </div>

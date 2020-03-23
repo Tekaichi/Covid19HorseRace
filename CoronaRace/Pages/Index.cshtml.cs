@@ -31,10 +31,17 @@ namespace CoronaRace.Pages
 
         private List<Country> getCountries()
         {
+            string []horses = { "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/samsung/220/horse-racing_1f3c7.png ", 
+                "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/google/241/horse_1f40e.png",
+                "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/whatsapp/238/horse_1f40e.png", 
+                "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/softbank/145/horse_1f40e.png",
+            "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/docomo/205/horse_1f40e.png",
+            "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/htc/37/horse_1f40e.png"};
             var countries = new List<Country>();
             var data = GetData();
             var table = Regex.Match(data, "<tbody>[\\s\\S]*?</tbody>");
             var rows = Regex.Matches(table.Value, "<tr .*?>[\\s\\S]*?</tr>");
+            Random rand = new Random(Guid.NewGuid().GetHashCode());
             foreach(var row in rows)
             {
                 var cols = Regex.Matches(row.ToString(), "<td .*?>[\\s\\S]*?</td>");
@@ -47,7 +54,7 @@ namespace CoronaRace.Pages
                 var country = new Country()
                 {
                     Name = name.Value.Replace("<", "").Replace(">", ""),
-
+                    Horse = horses[rand.Next(0, horses.Length - 1)],
                     Cases = cases
                 };
                 countries.Add(country);
