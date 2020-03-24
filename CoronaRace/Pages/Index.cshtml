@@ -32,47 +32,53 @@
         <i>Active Cases </i>/ <b>Total Cases</b>
     </span>
 </div>
-<div class="board">
-
+<table class="board table-hover">
+    <tr>
+    <th></th>
+    <th></th>
+    <th>&nbsp;&nbsp;&nbsp;<i>Today</i></th>
+    </tr>
     @{
         int dash_ = 0;
         int horse_mov = 0;
     }
-    @foreach(var country in Model.countries) {
+    @foreach (var country in Model.countries)
+    {
 
-       horse_mov = (horse_mov + 1) % 6;
+        horse_mov = (horse_mov + 1) % 6;
 
-    <div class="row">
-        <div class="col-sm-2 col-name text-right">
-            <b class="name">@country.Name</b>
-        </div>
-        <div class="col">
-            <div class="player">
+        <tr>
+            <td style="width:7%;border:0.25px solid gray;" class="align-items-center">
+                <b class="name" style="margin-bottom:0.2em;">@country.Name</b>
+            </td>
 
-                <div class="movable">
-                
-                    @for (var i = 0; i < country.Distance; i += 25)
-                    {
-                        dash_ = (dash_ + 1) % 5;
-                    <i class="line dash_@dash_" style="opacity:0.5;">_</i>
-                    }
+                <td class="player align-items-center">
 
-                    <img class="horse horse-movement-@horse_mov" src=@country.Horse alt="race">
+                  
 
-                    <i class="line number">@country.Cases.ActiveCases/@country.Cases.TotalCases</i>
+                        @for (var i = 0; i < country.Distance; i += 25)
+                        {
+                            dash_ = (dash_ + 1) % 5;
+                            <i class="line dash_@dash_" style="opacity:0.5;">-</i>
+                        }
+
+                        <img class="horse horse-movement-@horse_mov" src=@country.Horse alt="race">
+                         
+                        <i class="number">@country.Cases.ActiveCases/@country.Cases.TotalCases</i>
 
 
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-1" style="position:relative;left:-0.1em;">
-            <div class="newcases" style="background-color:yellow;position:relative;top:0.1em;left:-2em;width:80%; height:90%;border:0.1em solid black;">
-                +@country.Cases.NewCases
-            </div>
-        </div>
-    </div>
+                   
+                </td>
+            
+            <td style="width:6%;">
+               @if(country.Cases.NewCases != 0){
+                    <span class="line" style="border:1px solid black;border-radius:1em;background-color:yellow;padding:0.5em;">+@country.Cases.NewCases</span>
+               }
+              
+            </td>
+        </tr>
     }
 
-</div>
+</table>
 
 
