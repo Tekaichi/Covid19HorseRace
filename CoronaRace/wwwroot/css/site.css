@@ -76,6 +76,13 @@ body {
     transform:rotateY(180deg);
 }
 
+.skull{
+    width:1.1em;
+    height:1.1em;
+    
+    opacity:0.8;
+}
+
 .horse-movement-0 {
     animation: shake  1.5s infinite;
 }
@@ -133,9 +140,8 @@ body {
  }
 .number {
     background-color: lightblue;
-    padding: 0.3em;
-    position: relative;
-    top: 1.5em;
+    padding: 0.45em;
+  
 }
 
 .dash_0 {

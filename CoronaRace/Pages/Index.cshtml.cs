@@ -50,6 +50,7 @@ namespace CoronaRace.Pages
                 var totalcases = Regex.Match(cols[1].Value, "[\\d,]+");
                 var active_cases = Regex.Match(cols[6].Value, "[\\d,]+");
                 int new_cases;
+                int deaths;
                 try
                 {
                     new_cases = int.Parse(Regex.Match(cols[2].Value, "[\\d,]+").Value.Replace(",", ""));
@@ -58,11 +59,19 @@ namespace CoronaRace.Pages
                     new_cases = 0;
                 }
 
+                try
+                {
+                    deaths = int.Parse(Regex.Match(cols[3].Value, "[\\d,]+").Value.Replace(",", ""));
+                }catch(Exception e)
+                {
+                    deaths = 0;
+                }
                 var cases = new Cases()
                 {
                     ActiveCases = int.Parse(active_cases.Value.Replace(",", "")),
                     TotalCases = int.Parse(totalcases.Value.Replace(",", "")),
-                    NewCases = new_cases
+                    NewCases = new_cases,
+                    Deaths = deaths
                    
                 };
                 var country = new Country()
@@ -76,6 +85,7 @@ namespace CoronaRace.Pages
             }
              
            
+
             var total_cases = countries.Select(i => i.Cases.ActiveCases);
             var max = total_cases.Max();
             total_cases = total_cases.Concat(new[] { (int)(max * 1.1) });
@@ -83,10 +93,18 @@ namespace CoronaRace.Pages
             var sum = total_cases.Sum();
             var avg = total_cases.Average();
             var standardDeviation = Math.Sqrt((sum) / (total_cases.Count() - 1));
-            foreach(var country in countries)
+
+            var total_deaths = countries.Select(i => i.Cases.Deaths);
+            var sum_deaths = total_deaths.Sum();
+            var avg_deaths = total_deaths.Average();
+            var standardDeviation_deaths = Math.Sqrt((sum_deaths) / (total_deaths.Count() - 1));
+            foreach (var country in countries)
             {
                 country.Distance = (int)((country.Cases.ActiveCases - avg) / standardDeviation);
+                country.DeathDistance = (int)((country.Cases.Deaths - avg_deaths) / standardDeviation_deaths);
             }
+
+          
 
             return countries.OrderByDescending(i => i.Cases.ActiveCases).ToList();
         }

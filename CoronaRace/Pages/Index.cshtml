@@ -54,23 +54,35 @@
                 <b>@country.Name</b>
             </td>
 
-                <td class="player align-items-center">
+            <td class="player align-items-center" style="position:relative">
 
-                  
+                <div style="position:relative">
 
-                        @for (var i = 0; i < country.Distance; i += 25)
-                        {
-                            dash_ = (dash_ + 1) % 5;
-                            <i class="line dash_@dash_" style="opacity:0.5;">-</i>
-                        }
+                    @for (var i = 0; i < country.Distance; i += 25)
+                    {
+                        dash_ = (dash_ + 1) % 5;
+                        <i class="line dash_@dash_" style="opacity:0.5;">-</i>
+                    }
 
-                        <img class="horse horse-movement-@horse_mov" src=@country.Horse alt="race">
-                         
-                        <i class="number">@country.Cases.ActiveCases/@country.Cases.TotalCases</i>
+                    <img class="horse horse-movement-@horse_mov" src=@country.Horse alt="race">
 
+                    <i class="number">@country.Cases.ActiveCases/@country.Cases.TotalCases</i>
 
-                   
-                </td>
+                </div>
+                @if (country.Cases.Deaths != 0)
+                {
+                <div style="position:absolute;left:0em; top:0em;bottom:0em;">
+
+                    @for (var i = 0; i < country.DeathDistance; i += 25)
+                    {
+                        <b style="opacity:0;">-</b>
+
+                    }
+
+                    <img class="skull" style="width:1.5em;height:1.5em;margin:0 auto;" src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/microsoft/209/skull_1f480.png" alt="skull">
+                </div>
+                }
+            </td>
             
             <td style="width:6%;">
                @if(country.Cases.NewCases != 0){
