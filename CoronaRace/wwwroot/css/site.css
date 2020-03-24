@@ -72,8 +72,7 @@ body {
 .horse {
     width: 2em;
     height: 2em;
-    position:relative;
-    top:0.25em;
+    margin:0 auto;
     transform:rotateY(180deg);
 }
 
@@ -99,11 +98,7 @@ body {
 .horse-movement-5 {
     animation: shake 2s 2s infinite;
 }
-.line {
-    position: relative;
-    top: 0.1em;
-    right:-0.1em;
-}
+
 
 body {
     margin: 2.5em;
@@ -122,55 +117,64 @@ body {
     
 }/**/
 
- .col-name{
-    
+ .movable{
+     margin:0 auto;
  }
+
  
  .name{
-  
-     position:relative;
-     top:0.45em;
-     right:-0.8em;
+    margin:0 auto;
 
  }
 
+ .line{
+     position:relative;
+     margin: 0 auto;
+ }
 .number {
     background-color: lightblue;
     padding: 0.3em;
-    top: 0.5em;
-    bottom: 0.4em;
+    position: relative;
+    top: 1.5em;
 }
 
 .dash_0 {
-    animation: opace 5s infinite;
+    animation: opace 7s infinite;
 }
 .dash_1 {
-    animation: opace 1s 5s infinite;
+    animation: opace 1s 6s infinite;
 }
 .dash_2 {
     animation: opace 2s 5s infinite;
 }
 .dash_3 {
-    animation: opace 3s 5s infinite;
+    animation: opace 3s 5.5s infinite;
 }
 .dash_4 {
-    animation: opace 4s 5s infinite;
+    animation: opace 4s 4.5s infinite;
 }
 
 @keyframes opace{
-    10%,90%{
-        opacity:1.0;
+    10%,90% {
+        opacity: 1.0;
+      
     }
     0%, 80% {
         opacity: 0.5;
+       
     }
 
-    30%, 50%, 70% {
+    30%,  70% {
         opacity: 0.2;
+        
     }
 
     40%, 60% {
         opacity: 0.8;
+        
+    }
+    50%{
+        opacity:0;
     }
 }
 @keyframes shake {
