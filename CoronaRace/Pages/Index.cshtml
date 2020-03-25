@@ -50,37 +50,39 @@
         horse_mov = (horse_mov + 1) % 6;
 
         <tr>
-            <td style="width:7%;border:0.25px solid gray;" class="align-items-center">
+            <td style="width:8%;" class="align-items-center text-sm-right">
                 <b>@country.Name</b>
             </td>
 
-            <td class="player align-items-center" style="position:relative">
+            <td class="player align-items-center" style="position:relative;">
 
-                <div style="position:relative">
+                <div style="position:absolute;bottom:-0.01em;">
 
-                    @for (var i = 0; i < country.Distance; i += 25)
+                    @for (var i = 0; i < country.Distance; i += 15)
                     {
                         dash_ = (dash_ + 1) % 5;
-                        <i class="line dash_@dash_" style="opacity:0.5;">-</i>
+                        <i class="line dash_@dash_" style="opacity:0.5;">.</i>
                     }
 
                     <img class="horse horse-movement-@horse_mov" src=@country.Horse alt="race">
 
-                    <i class="number">@country.Cases.ActiveCases/@country.Cases.TotalCases</i>
+                    <span class="number"><i >@country.Cases.ActiveCases</i>/<b>@country.Cases.TotalCases</b></span>
 
                 </div>
                 @if (country.Cases.Deaths != 0)
                 {
-                <div style="position:absolute;left:0em; top:0em;bottom:0em;">
+            <div style="position:absolute;top:-0.05em;">
 
-                    @for (var i = 0; i < country.DeathDistance; i += 25)
-                    {
-                        <b style="opacity:0;">-</b>
+                @for (var i = 0; i < country.DeathDistance; i += 15)
+                {
+                    dash_ = (dash_ + 1) % 5;
+                    <b style="opacity:0.5;color:red;" class="dash_@dash_">.</b>
 
-                    }
+                }
 
-                    <img class="skull" style="width:1.5em;height:1.5em;margin:0 auto;" src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/microsoft/209/skull_1f480.png" alt="skull">
-                </div>
+                <img class="skull" style="width:1.5em;height:1.5em;margin:0 auto;border-radius:0.2em;" src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/microsoft/209/skull_1f480.png" alt="skull">
+                <i class="number-death">@country.Cases.Deaths</i>
+            </div>
                 }
             </td>
             

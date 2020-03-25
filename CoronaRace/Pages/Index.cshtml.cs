@@ -40,6 +40,7 @@ namespace CoronaRace.Pages
             "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/htc/37/horse_1f40e.png"};
             var countries = new List<Country>();
             var data = GetData();
+           
             var table = Regex.Match(data, "<tbody>[\\s\\S]*?</tbody>");
             var rows = Regex.Matches(table.Value, "<tr .*?>[\\s\\S]*?</tr>");
             Random rand = new Random(Guid.NewGuid().GetHashCode());

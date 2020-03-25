@@ -70,8 +70,8 @@ body {
   line-height: 60px; /* Vertically center the text there */
 }
 .horse {
-    width: 2em;
-    height: 2em;
+    width: 1.1em;
+    height: 1.1em;
     margin:0 auto;
     transform:rotateY(180deg);
 }
@@ -108,12 +108,12 @@ body {
 
 
 body {
-    margin: 2.5em;
+    margin: 1em;
     background-color: lightsteelblue;
 }
 
 .board {
-    margin: 0.4em 0.5em 2em 0.4em;
+    margin: 0.4em 0.2em 2em 0.2em;
   
 }
 
@@ -140,9 +140,11 @@ body {
  }
 .number {
     background-color: lightblue;
-    padding: 0.45em;
+    padding: 0.2em;
+   
   
 }
+
 
 .dash_0 {
     animation: opace 7s infinite;
