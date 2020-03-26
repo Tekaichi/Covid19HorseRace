@@ -9,24 +9,25 @@
 <div style="text-align: center;">
     <h1><i style="color:green">Stay home</i> or <b style="color:red">win the race</b></h1>
     <span style="position:absolute;top:0.05em;right:0.8em;">
-        @DateTime.Now.ToString("dd/MM/yyyy")</span>
+        @DateTime.Now.ToString("dd/MM/yyyy")
+    </span>
 
-        Contribute                             
-
-                                                                      
-        <a href="https://github.com/Tekaichi/Covid19HorseRace" target="_blank">
-            <img alt="github " src="https://cdn.icon-icons.com/icons2/1488/PNG/512/5347-github_102542.png" style="width:2em;height:2em" />
-        </a>
+    Contribute
 
 
+    <a href="https://github.com/Tekaichi/Covid19HorseRace" target="_blank">
+        <img alt="github " src="https://cdn.icon-icons.com/icons2/1488/PNG/512/5347-github_102542.png" style="width:2em;height:2em" />
+    </a>
 
 
 
-        <br />
-        [<a href="https://www.worldometers.info/coronavirus/" style="text-decoration:none" target="_blank">source</a>]
 
-        <br />
-        <br />
+
+    <br />
+    [<a href="https://www.worldometers.info/coronavirus/" style="text-decoration:none" target="_blank">source</a>]
+
+    <br />
+    <br />
 
 </div>
 <div class="text-center">
@@ -34,11 +35,14 @@
         <i>Active Cases </i>/ <b>Total Cases</b>
     </span>
 </div>
+
+
+
 <table class="board table-hover">
     <tr>
-    <th></th>
-    <th></th>
-    <th>&nbsp;&nbsp;&nbsp;<i>Today</i></th>
+        <th></th>
+        <th></th>
+        <th>&nbsp;&nbsp;&nbsp;<i>Today</i></th>
     </tr>
     @{
         int dash_ = 0;
@@ -56,41 +60,42 @@
 
             <td class="player align-items-center" style="position:relative;">
 
-                <div style="position:absolute;bottom:0.015em;">
+                <div style="position:absolute;bottom:0.015em;" class="active">
 
-                    @for (var i = 0; i < country.Distance; i += 15)
+                    @for (var i = 0; i < country.Distance; i++)
                     {
                         dash_ = (dash_ + 1) % 5;
-                        <i class="line dash_@dash_" style="opacity:0.5;">.</i>
+                        <b class="line dash_@dash_" style="opacity:0.5;">.</b>
                     }
 
                     <img class="horse horse-movement-@horse_mov" src=@country.Horse alt="race">
 
-                    <span class="number"><i >@country.Cases.ActiveCases</i>/<b>@country.Cases.TotalCases</b></span>
+                    <span class="number"><i>@country.Cases.ActiveCases</i>/<b>@country.Cases.TotalCases</b></span>
 
                 </div>
                 @if (country.Cases.Deaths != 0)
                 {
-            <div style="position:absolute;top:0.015em;">
+                    <div style="position:absolute;top:0.015em;" class="deaths">
 
-                @for (var i = 0; i < country.DeathDistance; i += 15)
-                {
-                    dash_ = (dash_ + 1) % 5;
-                    <b style="opacity:0.5;color:red;" class="dash_@dash_">.</b>
+                        @for (var i = 0; i < country.DeathDistance; i++)
+                        {
+                            dash_ = (dash_ + 1) % 5;
+                            <b style="opacity:0.5;color:red;" class="dash_@dash_">.</b>
 
-                }
+                        }
 
-                <img class="skull" style="width:1.5em;height:1.5em;margin:0 auto;border-radius:0.2em;" src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/microsoft/209/skull_1f480.png" alt="skull">
-                <i class="number-death">@country.Cases.Deaths</i>
-            </div>
+                        <img class="skull" style="width:1.5em;height:1.5em;margin:0 auto;border-radius:0.2em;" src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/microsoft/209/skull_1f480.png" alt="skull">
+                        <i class="number-death">@country.Cases.Deaths</i>
+                    </div>
                 }
             </td>
-            
+
             <td style="width:6%;">
-               @if(country.Cases.NewCases != 0){
+                @if (country.Cases.NewCases != 0)
+                {
                     <span class="line" style="border:1px solid black;border-radius:1em;background-color:yellow;padding:0.5em;">+@country.Cases.NewCases</span>
-               }
-              
+                }
+
             </td>
         </tr>
     }

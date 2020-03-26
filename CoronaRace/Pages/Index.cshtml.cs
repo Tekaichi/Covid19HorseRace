@@ -87,23 +87,22 @@ namespace CoronaRace.Pages
              
            
 
-            var total_cases = countries.Select(i => i.Cases.ActiveCases);
-            var max = total_cases.Max();
-            total_cases = total_cases.Concat(new[] { (int)(max * 1.1) });
+            var active_cases_sel = countries.Select(i => i.Cases.ActiveCases);
+            var max = active_cases_sel.Max();
 
-            var sum = total_cases.Sum();
-            var avg = total_cases.Average();
-            var standardDeviation = Math.Sqrt((sum) / (total_cases.Count() - 1));
+            const int max_distance = 80;
+          
+      
 
             var total_deaths = countries.Select(i => i.Cases.Deaths);
-            var sum_deaths = total_deaths.Sum();
-            var avg_deaths = total_deaths.Average();
-            var standardDeviation_deaths = Math.Sqrt((sum_deaths) / (total_deaths.Count() - 1));
+
+            var max_deaths = total_deaths.Max();
             foreach (var country in countries)
             {
-                country.Distance = (int)((country.Cases.ActiveCases - avg) / standardDeviation);
-                country.DeathDistance = (int)((country.Cases.Deaths - avg_deaths) / standardDeviation_deaths);
+                country.Distance = max_distance * country.Cases.ActiveCases / max;
+                country.DeathDistance = max_distance * country.Cases.Deaths / max_deaths;
             }
+
 
           
 
