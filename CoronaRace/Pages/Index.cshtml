@@ -27,9 +27,22 @@
     [<a href="https://www.worldometers.info/coronavirus/" style="text-decoration:none" target="_blank">source</a>]
 
     <br />
-    <br />
+ 
 
+    <div class="container text-center">
+        <img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/google/241/smiling-face_263a.png" style="width:1.5em;height:1.5em;" title ="Recovered"/>
+        @for (var i = 0; i < Model.TotalRecovered; i++)
+        {
+            <b class="pt-1 dash_@(i%6) "style="color:green;">.</b>
+        }
+        @for (var i = 0; i < Model.TotalDeath; i++)
+        {
+            <b class="pt-1 dash_@(i%6)" style="color:red">.</b>
+        }
+     <img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/microsoft/209/coffin_26b0.png" style="width:1.5em;height:1.5em;" title="Deaths"/>
+    </div>
 </div>
+<br />
 <div class="text-center">
     <span class="alert-info p-1" style="margin-top:0.5em">
         <i>Active Cases </i>/ <b>Total Cases</b>

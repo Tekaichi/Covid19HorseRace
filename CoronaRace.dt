@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-16"?>
-<DevTrackerData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" SolutionTotalEditTime="PT1H4M27.2416236S" SolutionTotalViewTime="PT3H11M9.2119579S" SolutionTotalDebugTime="PT5M4.9647165S">
+<DevTrackerData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" SolutionTotalEditTime="PT1H8M21.231357S" SolutionTotalViewTime="PT3H20M59.9216875S" SolutionTotalDebugTime="PT5M29.1826282S">
   <FileVersion>
     <Major>1</Major>
     <Minor>0</Minor>
@@ -14,78 +14,46 @@
   </ProjectsCreatedDateList>
   <SessionTimeList />
   <LastSessionTimeList>
-    <DevTrackerDataItem ViewActiveTime="PT36.7782189S" EditActiveTime="PT0S">
+    <DevTrackerDataItem ViewActiveTime="PT24.2179117S" EditActiveTime="PT0S">
       <ModifiedDate>0001-01-01T00:00:00</ModifiedDate>
       <EditedCount>0</EditedCount>
       <ViewedCount>1</ViewedCount>
       <Item>Debug Mode</Item>
       <ItemType>DebugModeItem</ItemType>
       <ProjectName />
-      <CreatedDate>2020-03-25T17:13:20.5544566+01:00</CreatedDate>
+      <CreatedDate>2020-03-26T19:46:36.8468054+01:00</CreatedDate>
       <ViewedBy>msdc1</ViewedBy>
     </DevTrackerDataItem>
-    <DevTrackerDataItem ViewActiveTime="PT1M57.1478457S" EditActiveTime="PT2M21.0896838S">
-      <ModifiedDate>2020-03-25T17:38:31.4877391+01:00</ModifiedDate>
-      <ModifiedBy>msdc1</ModifiedBy>
-      <EditedCount>1</EditedCount>
-      <ViewedCount>1</ViewedCount>
-      <Item>C:\Users\msdc1\Desktop\Code nonsense\CoronaRace\CoronaRace\CoronaRace\Pages\Error.cshtml</Item>
-      <ItemType>ProjectItem</ItemType>
-      <ProjectName>C:\Users\msdc1\Desktop\Code nonsense\CoronaRace\CoronaRace\CoronaRace\CoronaRace.csproj</ProjectName>
-      <CreatedDate>2020-03-25T17:13:32.3028562+01:00</CreatedDate>
-      <ViewedBy>msdc1</ViewedBy>
-    </DevTrackerDataItem>
-    <DevTrackerDataItem ViewActiveTime="PT1M33.7685909S" EditActiveTime="PT1M28.9687313S">
-      <ModifiedDate>2020-03-25T16:55:34.3514758+01:00</ModifiedDate>
+    <DevTrackerDataItem ViewActiveTime="PT2M5.1801702S" EditActiveTime="PT11.309775S">
+      <ModifiedDate>2020-03-26T19:51:54.6743374+01:00</ModifiedDate>
       <ModifiedBy>msdc1</ModifiedBy>
       <EditedCount>1</EditedCount>
       <ViewedCount>1</ViewedCount>
       <Item>C:\Users\msdc1\Desktop\Code nonsense\CoronaRace\CoronaRace\CoronaRace\Pages\Index.cshtml</Item>
       <ItemType>ProjectItem</ItemType>
       <ProjectName>C:\Users\msdc1\Desktop\Code nonsense\CoronaRace\CoronaRace\CoronaRace\CoronaRace.csproj</ProjectName>
-      <CreatedDate>2020-03-25T16:47:14.0058045+01:00</CreatedDate>
+      <CreatedDate>2020-03-26T19:44:35.2773246+01:00</CreatedDate>
       <ViewedBy>msdc1</ViewedBy>
     </DevTrackerDataItem>
-    <DevTrackerDataItem ViewActiveTime="PT3M18.5481851S" EditActiveTime="PT0S">
-      <ModifiedDate>0001-01-01T00:00:00</ModifiedDate>
-      <EditedCount>0</EditedCount>
+    <DevTrackerDataItem ViewActiveTime="PT7M32.2135585S" EditActiveTime="PT3M42.6809717S">
+      <ModifiedDate>2020-03-26T19:59:14.6438071+01:00</ModifiedDate>
+      <ModifiedBy>msdc1</ModifiedBy>
+      <EditedCount>1</EditedCount>
       <ViewedCount>1</ViewedCount>
       <Item>C:\Users\msdc1\Desktop\Code nonsense\CoronaRace\CoronaRace\CoronaRace\Pages\Index.cshtml.cs</Item>
       <ItemType>ProjectItem</ItemType>
       <ProjectName>C:\Users\msdc1\Desktop\Code nonsense\CoronaRace\CoronaRace\CoronaRace\CoronaRace.csproj</ProjectName>
-      <CreatedDate>2020-03-25T17:10:16.8154378+01:00</CreatedDate>
+      <CreatedDate>2020-03-26T19:40:56.4381646+01:00</CreatedDate>
       <ViewedBy>msdc1</ViewedBy>
     </DevTrackerDataItem>
-    <DevTrackerDataItem ViewActiveTime="PT25.1408436S" EditActiveTime="PT0S">
+    <DevTrackerDataItem ViewActiveTime="PT13.3219861S" EditActiveTime="PT0S">
       <ModifiedDate>0001-01-01T00:00:00</ModifiedDate>
       <EditedCount>0</EditedCount>
       <ViewedCount>1</ViewedCount>
-      <Item>C:\Users\msdc1\Desktop\Code nonsense\CoronaRace\CoronaRace\CoronaRace\Program.cs</Item>
+      <Item>C:\Users\msdc1\Desktop\Code nonsense\CoronaRace\CoronaRace\CoronaRace\wwwroot\css\site.css</Item>
       <ItemType>ProjectItem</ItemType>
       <ProjectName>C:\Users\msdc1\Desktop\Code nonsense\CoronaRace\CoronaRace\CoronaRace\CoronaRace.csproj</ProjectName>
-      <CreatedDate>2020-03-25T16:49:49.6188528+01:00</CreatedDate>
-      <ViewedBy>msdc1</ViewedBy>
-    </DevTrackerDataItem>
-    <DevTrackerDataItem ViewActiveTime="PT6M39.163044S" EditActiveTime="PT2M58.524376S">
-      <ModifiedDate>2020-03-25T17:10:10.3443945+01:00</ModifiedDate>
-      <ModifiedBy>msdc1</ModifiedBy>
-      <EditedCount>1</EditedCount>
-      <ViewedCount>1</ViewedCount>
-      <Item>C:\Users\msdc1\Desktop\Code nonsense\CoronaRace\CoronaRace\CoronaRace\wwwroot\js\site.js</Item>
-      <ItemType>ProjectItem</ItemType>
-      <ProjectName>C:\Users\msdc1\Desktop\Code nonsense\CoronaRace\CoronaRace\CoronaRace\CoronaRace.csproj</ProjectName>
-      <CreatedDate>2020-03-25T16:51:08.6870708+01:00</CreatedDate>
-      <ViewedBy>msdc1</ViewedBy>
-    </DevTrackerDataItem>
-    <DevTrackerDataItem ViewActiveTime="PT29.547662S" EditActiveTime="PT1.4903906S">
-      <ModifiedDate>2020-03-25T17:12:56.8251399+01:00</ModifiedDate>
-      <ModifiedBy>msdc1</ModifiedBy>
-      <EditedCount>1</EditedCount>
-      <ViewedCount>1</ViewedCount>
-      <Item>C:\Users\msdc1\Desktop\Code nonsense\CoronaRace\CoronaRace\CoronaRace\Startup.cs</Item>
-      <ItemType>ProjectItem</ItemType>
-      <ProjectName>C:\Users\msdc1\Desktop\Code nonsense\CoronaRace\CoronaRace\CoronaRace\CoronaRace.csproj</ProjectName>
-      <CreatedDate>2020-03-25T17:12:41.2459121+01:00</CreatedDate>
+      <CreatedDate>2020-03-26T19:50:28.2658103+01:00</CreatedDate>
       <ViewedBy>msdc1</ViewedBy>
     </DevTrackerDataItem>
   </LastSessionTimeList>
@@ -153,10 +121,10 @@
       <CreatedDate>2020-03-23T10:40:22.9732434+01:00</CreatedDate>
       <ViewedBy>msdc1</ViewedBy>
     </DevTrackerDataItem>
-    <DevTrackerDataItem ViewActiveTime="PT5M4.9647165S" EditActiveTime="PT6M11.7798812S">
+    <DevTrackerDataItem ViewActiveTime="PT5M29.1826282S" EditActiveTime="PT6M11.7798812S">
       <ModifiedDate>0001-01-01T00:00:00</ModifiedDate>
       <EditedCount>6</EditedCount>
-      <ViewedCount>8</ViewedCount>
+      <ViewedCount>9</ViewedCount>
       <Item>Debug Mode</Item>
       <ItemType>DebugModeItem</ItemType>
       <ProjectName />
@@ -174,22 +142,22 @@
       <CreatedDate>2020-03-25T09:27:03.9757861+01:00</CreatedDate>
       <ViewedBy>msdc1</ViewedBy>
     </DevTrackerDataItem>
-    <DevTrackerDataItem ViewActiveTime="PT1H51M27.5641051S" EditActiveTime="PT23M23.8562305S">
-      <ModifiedDate>2020-03-25T16:55:34.3514758+01:00</ModifiedDate>
+    <DevTrackerDataItem ViewActiveTime="PT1H53M32.7442753S" EditActiveTime="PT23M35.1660055S">
+      <ModifiedDate>2020-03-26T19:51:54.6743374+01:00</ModifiedDate>
       <ModifiedBy>msdc1</ModifiedBy>
-      <EditedCount>6</EditedCount>
-      <ViewedCount>9</ViewedCount>
+      <EditedCount>7</EditedCount>
+      <ViewedCount>10</ViewedCount>
       <Item>C:\Users\msdc1\Desktop\Code nonsense\CoronaRace\CoronaRace\CoronaRace\Pages\Index.cshtml</Item>
       <ItemType>ProjectItem</ItemType>
       <ProjectName>C:\Users\msdc1\Desktop\Code nonsense\CoronaRace\CoronaRace\CoronaRace\CoronaRace.csproj</ProjectName>
       <CreatedDate>2020-03-23T10:45:03.1948882+01:00</CreatedDate>
       <ViewedBy>msdc1</ViewedBy>
     </DevTrackerDataItem>
-    <DevTrackerDataItem ViewActiveTime="PT23M12.3033082S" EditActiveTime="PT20M10.6008004S">
-      <ModifiedDate>2020-03-25T09:29:02.398879+01:00</ModifiedDate>
+    <DevTrackerDataItem ViewActiveTime="PT30M44.5118799S" EditActiveTime="PT23M53.2817721S">
+      <ModifiedDate>2020-03-26T19:59:14.6438071+01:00</ModifiedDate>
       <ModifiedBy>msdc1</ModifiedBy>
-      <EditedCount>4</EditedCount>
-      <ViewedCount>8</ViewedCount>
+      <EditedCount>5</EditedCount>
+      <ViewedCount>9</ViewedCount>
       <Item>C:\Users\msdc1\Desktop\Code nonsense\CoronaRace\CoronaRace\CoronaRace\Pages\Index.cshtml.cs</Item>
       <ItemType>ProjectItem</ItemType>
       <ProjectName>C:\Users\msdc1\Desktop\Code nonsense\CoronaRace\CoronaRace\CoronaRace\CoronaRace.csproj</ProjectName>
@@ -226,11 +194,11 @@
       <CreatedDate>2020-03-25T16:49:49.6188528+01:00</CreatedDate>
       <ViewedBy>msdc1</ViewedBy>
     </DevTrackerDataItem>
-    <DevTrackerDataItem ViewActiveTime="PT40M50.9427239S" EditActiveTime="PT12M54.8931885S">
+    <DevTrackerDataItem ViewActiveTime="PT41M4.26471S" EditActiveTime="PT12M54.8931885S">
       <ModifiedDate>2020-03-25T10:31:08.1188472+01:00</ModifiedDate>
       <ModifiedBy>msdc1</ModifiedBy>
       <EditedCount>6</EditedCount>
-      <ViewedCount>6</ViewedCount>
+      <ViewedCount>7</ViewedCount>
       <Item>C:\Users\msdc1\Desktop\Code nonsense\CoronaRace\CoronaRace\CoronaRace\wwwroot\css\site.css</Item>
       <ItemType>ProjectItem</ItemType>
       <ProjectName>C:\Users\msdc1\Desktop\Code nonsense\CoronaRace\CoronaRace\CoronaRace\CoronaRace.csproj</ProjectName>
@@ -261,6 +229,48 @@
     </DevTrackerDataItem>
   </TotalTimeList>
   <HistoryTimeList>
+    <DevTrackerDataItem ViewActiveTime="PT13.3219861S" EditActiveTime="PT0S">
+      <ModifiedDate>0001-01-01T00:00:00</ModifiedDate>
+      <EditedCount>0</EditedCount>
+      <ViewedCount>1</ViewedCount>
+      <Item>C:\Users\msdc1\Desktop\Code nonsense\CoronaRace\CoronaRace\CoronaRace\wwwroot\css\site.css</Item>
+      <ItemType>ProjectItem</ItemType>
+      <ProjectName>C:\Users\msdc1\Desktop\Code nonsense\CoronaRace\CoronaRace\CoronaRace\CoronaRace.csproj</ProjectName>
+      <CreatedDate>2020-03-26T19:50:28.2658103+01:00</CreatedDate>
+      <ViewedBy>msdc1</ViewedBy>
+    </DevTrackerDataItem>
+    <DevTrackerDataItem ViewActiveTime="PT24.2179117S" EditActiveTime="PT0S">
+      <ModifiedDate>0001-01-01T00:00:00</ModifiedDate>
+      <EditedCount>0</EditedCount>
+      <ViewedCount>1</ViewedCount>
+      <Item>Debug Mode</Item>
+      <ItemType>DebugModeItem</ItemType>
+      <ProjectName />
+      <CreatedDate>2020-03-26T19:46:36.8468054+01:00</CreatedDate>
+      <ViewedBy>msdc1</ViewedBy>
+    </DevTrackerDataItem>
+    <DevTrackerDataItem ViewActiveTime="PT2M5.1801702S" EditActiveTime="PT11.309775S">
+      <ModifiedDate>2020-03-26T19:51:54.6743374+01:00</ModifiedDate>
+      <ModifiedBy>msdc1</ModifiedBy>
+      <EditedCount>1</EditedCount>
+      <ViewedCount>1</ViewedCount>
+      <Item>C:\Users\msdc1\Desktop\Code nonsense\CoronaRace\CoronaRace\CoronaRace\Pages\Index.cshtml</Item>
+      <ItemType>ProjectItem</ItemType>
+      <ProjectName>C:\Users\msdc1\Desktop\Code nonsense\CoronaRace\CoronaRace\CoronaRace\CoronaRace.csproj</ProjectName>
+      <CreatedDate>2020-03-26T19:44:35.2773246+01:00</CreatedDate>
+      <ViewedBy>msdc1</ViewedBy>
+    </DevTrackerDataItem>
+    <DevTrackerDataItem ViewActiveTime="PT7M32.209569S" EditActiveTime="PT3M42.6809717S">
+      <ModifiedDate>2020-03-26T19:59:14.6438071+01:00</ModifiedDate>
+      <ModifiedBy>msdc1</ModifiedBy>
+      <EditedCount>1</EditedCount>
+      <ViewedCount>1</ViewedCount>
+      <Item>C:\Users\msdc1\Desktop\Code nonsense\CoronaRace\CoronaRace\CoronaRace\Pages\Index.cshtml.cs</Item>
+      <ItemType>ProjectItem</ItemType>
+      <ProjectName>C:\Users\msdc1\Desktop\Code nonsense\CoronaRace\CoronaRace\CoronaRace\CoronaRace.csproj</ProjectName>
+      <CreatedDate>2020-03-26T19:40:56.4381646+01:00</CreatedDate>
+      <ViewedBy>msdc1</ViewedBy>
+    </DevTrackerDataItem>
     <DevTrackerDataItem ViewActiveTime="PT1M57.1478457S" EditActiveTime="PT2M21.0896838S">
       <ModifiedDate>2020-03-25T17:38:31.4877391+01:00</ModifiedDate>
       <ModifiedBy>msdc1</ModifiedBy>

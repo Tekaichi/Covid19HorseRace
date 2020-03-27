@@ -17,6 +17,8 @@ namespace CoronaRace.Pages
         private readonly ILogger<IndexModel> _logger;
 
         public IList<Country> countries { get; set; }
+        public double TotalRecovered { get; set; }
+        public double TotalDeath { get; set; }
         public IndexModel(ILogger<IndexModel> logger)
         {
             _logger = logger;
@@ -50,6 +52,7 @@ namespace CoronaRace.Pages
                 var name = Regex.Match(cols[0].Value, ">[A-Z].*?<");
                 var totalcases = Regex.Match(cols[1].Value, "[\\d,]+");
                 var active_cases = Regex.Match(cols[6].Value, "[\\d,]+");
+                int recovered_cases;
                 int new_cases;
                 int deaths;
                 try
@@ -67,12 +70,21 @@ namespace CoronaRace.Pages
                 {
                     deaths = 0;
                 }
+                try
+                {
+                    recovered_cases = int.Parse(Regex.Match(cols[5].Value, "[\\d,]+").Value.Replace(",", ""));
+                }
+                catch (Exception e)
+                {
+                    recovered_cases = 0;
+                }
                 var cases = new Cases()
                 {
                     ActiveCases = int.Parse(active_cases.Value.Replace(",", "")),
                     TotalCases = int.Parse(totalcases.Value.Replace(",", "")),
                     NewCases = new_cases,
-                    Deaths = deaths
+                    Deaths = deaths,
+                    RecoveredCases = recovered_cases
                    
                 };
                 var country = new Country()
@@ -84,9 +96,10 @@ namespace CoronaRace.Pages
                 countries.Add(country);
          
             }
-             
-           
 
+
+
+           
             var active_cases_sel = countries.Select(i => i.Cases.ActiveCases);
             var max = active_cases_sel.Max();
 
@@ -104,8 +117,19 @@ namespace CoronaRace.Pages
             }
 
 
-          
 
+
+            TotalDeath = total_deaths.Sum();
+            TotalRecovered = countries.Select(i => i.Cases.RecoveredCases).Sum();
+
+            var total = TotalDeath + TotalRecovered;
+            // 100 - total
+            // x   - v
+
+            var ratio = 100;
+            TotalDeath = Math.Round(TotalDeath * ratio / total);
+            TotalRecovered = Math.Round(TotalRecovered * ratio / total);
+            
             return countries.OrderByDescending(i => i.Cases.ActiveCases).ToList();
         }
 
