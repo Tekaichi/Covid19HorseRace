@@ -110,6 +110,7 @@ body {
 body {
     margin: 0.4em;
     background-color: lightsteelblue;
+    margin-bottom:0.8em;
 }
 
 .board {
