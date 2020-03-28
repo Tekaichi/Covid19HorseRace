@@ -13,5 +13,6 @@ namespace CoronaRace.Models
         public int Distance { get; set; }
         public int DeathDistance { get; set; }
         public string Horse { get; set; }
+        public int RecoveredDistance { get; set; }
     }
 }

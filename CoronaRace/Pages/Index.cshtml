@@ -61,14 +61,14 @@ background-image: linear-gradient(90deg, rgba(13,185,90,1) @(Model.TotalRecovere
 
         horse_mov = (horse_mov + 1) % 6;
 
-        <tr>
+        <tr style="height:4.15em;">
             <td style="width:8%;" class="align-items-center text-sm-right">
                 <b>@country.Name</b>
             </td>
 
             <td class="player align-items-center" style="position:relative;">
 
-                <div style="position:absolute;bottom:0.015em;" class="active">
+                <div style="position:absolute;bottom:0.012em;" class="active">
 
                     @for (var i = 0; i < country.Distance; i++)
                     {
@@ -94,6 +94,22 @@ background-image: linear-gradient(90deg, rgba(13,185,90,1) @(Model.TotalRecovere
 
                         <img class="skull" style="width:1.5em;height:1.5em;margin:0 auto;border-radius:0.2em;" src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/microsoft/209/skull_1f480.png" alt="skull">
                         <i class="number-death">@country.Cases.Deaths</i>
+                    </div>
+                }
+
+                @if (country.Cases.RecoveredCases != 0)
+                {
+                    <div style="position:absolute;top:1.2em;" class="deaths">
+
+                        @for (var i = 0; i < country.RecoveredDistance; i++)
+                        {
+                            dash_ = (dash_ + 1) % 5;
+                            <b style="opacity:0.5;color:green;" class="dash_@dash_">.</b>
+
+                        }
+
+                        <img class="skull" style="width:1.5em;height:1.5em;margin:0 auto;border-radius:0.2em;" src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/google/241/flexed-biceps_1f4aa.png" alt="recovered">
+                        <i class="number-death">@country.Cases.RecoveredCases</i>
                     </div>
                 }
             </td>

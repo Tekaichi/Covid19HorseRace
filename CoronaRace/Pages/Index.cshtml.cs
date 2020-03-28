@@ -110,10 +110,12 @@ namespace CoronaRace.Pages
             var total_deaths = countries.Select(i => i.Cases.Deaths);
 
             var max_deaths = total_deaths.Max();
+            var max_recovered = countries.Select(i => i.Cases.RecoveredCases).Max();
             foreach (var country in countries)
             {
                 country.Distance = max_distance * country.Cases.ActiveCases / max;
                 country.DeathDistance = max_distance * country.Cases.Deaths / max_deaths;
+                country.RecoveredDistance = max_distance * country.Cases.RecoveredCases / max_recovered;
             }
 
 
