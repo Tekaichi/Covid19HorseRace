@@ -58,10 +58,7 @@ html {
   min-height: 100%;
 }
 
-body {
-  /* Margin bottom by footer height */
-  margin-bottom: 60px;
-}
+
 .footer {
   position: absolute;
   bottom: 0;
@@ -110,7 +107,7 @@ body {
 body {
     margin: 0.4em;
     background-color: lightsteelblue;
-    margin-bottom:0.8em;
+    margin-bottom:0.9em;
 }
 
 .board {
@@ -167,7 +164,13 @@ body {
     animation: opace 1s 4.5s infinite;
 }
 
-@keyframes opace{
+.names{
+    opacity:0.4;
+    font-size:0.5em;
+    text-decoration:dashed;
+    z-index:-1;
+}
+@keyframes opace {
     10%,90% {
         opacity: 1.0;
       

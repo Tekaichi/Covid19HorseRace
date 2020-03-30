@@ -6,37 +6,44 @@
 
 
 
-    <div class="container">
-        <h1 class="text-center"><i style="color:green">Stay home</i> or <b style="color:rgba(255,67,0,1)">win the race</b></h1>
-        <div class="container" style="width:60%;height:1.7em;background: rgb(13,185,90);
+<div class="container">
+    <h1 class="text-center"><i style="color:green">Stay home</i> or <b style="color:rgba(255,67,0,1)">win the race</b></h1>
+    <div class="container" style="width:60%;height:1.7em;background: rgb(13,185,90);
 background-image: linear-gradient(90deg, rgba(13,185,90,1) @(Model.TotalRecovered)%, rgba(255,67,0,1) @(Model.TotalDeath)%);">
-            <b>Recovered @(Model.TotalRecovered)%</b>
-            <b style="left:66%;position:relative;">Death @(Model.TotalDeath)%</b>
-        </div>
-        <div class="text-center mt-1"> <i style="border:0.5px solid black;background-color:lavender;padding:0.3em;">Total: @Model.countries.Sum(i => i.Cases.Deaths + i.Cases.RecoveredCases)</i></div>
-        <span style="position:absolute;top:0.05em;right:0.8em;">
-            @DateTime.Now.ToString("dd/MM/yyyy")
-        </span>
-        <div class="text-center">
-            Contribute
-
-
-            <a href="https://github.com/Tekaichi/Covid19HorseRace" target="_blank">
-                <img alt="github " src="https://cdn.icon-icons.com/icons2/1488/PNG/512/5347-github_102542.png" style="width:2em;height:2em" />
-            </a>
-
-
-
-
-
-            <br />
-            [<a href="https://www.worldometers.info/coronavirus/" style="text-decoration:none" target="_blank">source</a>]
-
-            <br />
-        </div>
-
-       
+        <b>Recovered @(Model.TotalRecovered)%</b>
+        <b style="left:66%;position:relative;">Death @(Model.TotalDeath)%</b>
     </div>
+    <div class="text-center mt-1"> <i style="border:0.5px solid black;background-color:lavender;padding:0.3em;">Total: @Model.countries.Sum(i => i.Cases.Deaths + i.Cases.RecoveredCases)</i></div>
+    <span style="position:absolute;top:0.05em;right:0.8em;">
+        @DateTime.Now.ToString("dd/MM/yyyy")
+    </span>
+    <div class="text-center">
+        Contribute
+
+
+        <a href="https://github.com/Tekaichi/Covid19HorseRace" target="_blank">
+            <img alt="github " src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" style="width:2em;height:2em" />
+        </a>
+
+
+
+
+
+        <br />
+        [<a href="https://www.worldometers.info/coronavirus/" style="text-decoration:none" target="_blank">source</a>]
+
+        <br />
+    </div>
+
+
+</div>
+<div class="container position-absolute border-top-0 border-left-0">
+    @foreach (var name in Model.Collaborators)
+    {
+        <i class="names">@name</i>
+
+    }
+</div>
 <br />
 <div class="text-center">
     <span class="alert-info p-1" style="margin-top:0.5em">
