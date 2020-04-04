@@ -51,7 +51,7 @@ namespace CoronaRace.Pages
             Random rand = new Random(Guid.NewGuid().GetHashCode());
             foreach(var row in rows)
             {
-                var cols = Regex.Matches(row.ToString(), "<td .*?>[\\s\\S]*?</td>");
+                var cols = Regex.Matches(row.ToString(), "<td[\\s\\S]*?>[\\s\\S]*?</td>");
                 var name = Regex.Match(cols[0].Value, ">[A-Z].*?<");
                 var totalcases = Regex.Match(cols[1].Value, "[\\d,]+");
                 var active_cases = Regex.Match(cols[6].Value, "[\\d,]+");
@@ -124,8 +124,8 @@ namespace CoronaRace.Pages
 
 
 
-            TotalDeath = total_deaths.Sum();
-            TotalRecovered = countries.Select(i => i.Cases.RecoveredCases).Sum();
+            TotalDeath = countries[0].Cases.Deaths;
+            TotalRecovered = countries[0].Cases.RecoveredCases;
 
             var total = TotalDeath + TotalRecovered;
             // 100 - total
