@@ -106,7 +106,7 @@ namespace CoronaRace.Pages
             var active_cases_sel = countries.Select(i => i.Cases.ActiveCases);
             var max = active_cases_sel.Max();
 
-            const int max_distance = 80;
+            const int max_distance = 84;
           
       
 
@@ -114,11 +114,13 @@ namespace CoronaRace.Pages
 
             var max_deaths = total_deaths.Max();
             var max_recovered = countries.Select(i => i.Cases.RecoveredCases).Max();
+
+            var total_max = Math.Max(max, Math.Max(max_deaths, max_recovered));
             foreach (var country in countries)
             {
-                country.Distance = max_distance * country.Cases.ActiveCases / max;
-                country.DeathDistance = max_distance * country.Cases.Deaths / max_deaths;
-                country.RecoveredDistance = max_distance * country.Cases.RecoveredCases / max_recovered;
+                country.Distance = max_distance * country.Cases.ActiveCases / total_max;
+                country.DeathDistance = max_distance * country.Cases.Deaths / total_max;
+                country.RecoveredDistance = max_distance * country.Cases.RecoveredCases / total_max;
             }
 
 
